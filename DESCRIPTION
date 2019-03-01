@@ -1,0 +1,19 @@
+Package: rtPCR
+Type: Package
+Title: This package provides a method to analyze rtPCR data using a robust
+    regression to isolate the exponential portion of the signal
+Version: 0.1.0
+Author: Paulo Refinetti
+Maintainer: Paulo Refinetti <paulo.refinetti@gmail.com>
+Description: More about what it does (maybe more than one line)
+License: Use it, edit it and cite my article if you use it.
+LazyData: TRUE
+Imports:
+    tools,
+    functional,
+    plyr,
+    reshape2,
+    ggplot2,
+    methods,
+    xlsx
+RoxygenNote: 5.0.1
