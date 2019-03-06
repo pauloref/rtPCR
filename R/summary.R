@@ -28,9 +28,7 @@ setMethod(signature="rtPCRlist",f="summary",definition=function(object,reference
              )
   CI[Ref]<-1
 
-  report<-data.frame("Efficiency"=Efficiency,"Concentration"=Concentration,
+  SumaryReport<-data.frame("Efficiency"=Efficiency,"Concentration"=Concentration,
                      "Confidence Ratio"=CI)
-
-
-  return(report)
+  return(SumaryReport)
 })

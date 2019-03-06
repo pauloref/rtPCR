@@ -31,17 +31,18 @@ join.rtPCR<-function(x,...){
         return(join.rtPCR(join.rtPCR(x,Y[[1]]),Y[2:length(Y)]))
 
       }else if(is.null(Y) | is.na(Y) ){
+        warning("Joining to an rtPCRlist object an object that is either NULL or NA. Returning original object without modifications")
         return(x)
       }
-
+    }else if(is.null(Y)){
+      warning("Joining to an rtPCRlist object an object that is either NULL or NA. Returning original object without modifications")
+      return(x)
     }else{
       stop(c("You can only append an object of type rtPCR or rtPCRlist to an rtPCRlist,
 or a list of them \n you gave a type: "),
            class(Y[[1]]) )
     }
   }else if(length(Args)>1){
-
     return(join.rtPCR(join.rtPCR(x,Args[[1]]),Args[2:length(Args)]))
   }
-
 }
